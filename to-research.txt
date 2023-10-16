@@ -1,0 +1,12 @@
+database/migrations/2023_10_09_190939_create_departments_table.php @line 18
+
+- soft delete laravel (have in mind that also in the respective model Department is added a trait softDelete)
+
+*CAREFUL - when going to update page of an employee, the existing photo of the employee is shown but its not in input field
+
+
+Be careful for the reason why at routes/web.php@line 22 the 'as' => 'admin' is added (it is to give name to the resource as admin.employees.index)
+
+look how model binding works in laravel (its used on the controllers)
+
+app/Models/Department @ scopeFilter ->  https://laravel.com/docs/10.x/eloquent#local-scopes
